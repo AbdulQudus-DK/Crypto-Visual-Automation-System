@@ -2,7 +2,7 @@ pymongo~=4.15.3
 edge-tts
 gtts~=2.5.4
 moviepy~=1.0.3
-Pillow~=9.5.0
+Pillow==10.2.0
 openai
 pyTelegramBotAPI
 requests~=2.32.5
