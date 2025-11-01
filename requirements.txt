@@ -1,12 +1,15 @@
 pip==25.1.1
 setuptools>=70.0.0
 wheel>=0.42.0
+
+fastapi
+uvicorn
+apscheduler
 pymongo~=4.15.3
 edge-tts
 gtts~=2.5.4
 moviepy~=1.0.3
 Pillow==10.2.0
-apscheduler
-fastapi
-uvicorn
+newspaper3k==0.2.8
+
 
