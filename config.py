@@ -1,20 +1,22 @@
-# config.py
 import os
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
+# Load .env file (for local development)
 load_dotenv()
 
-# MongoDB configuration
+# MongoDB Config
 MONGODB_URI = os.getenv("MONGODB_URI")
-MONGO_DB_NAME = os.getenv("MONGO_DB_NAME")
-MONGO_COLLECTION_NAME = os.getenv("MONGO_COLLECTION_NAME")
+MONGO_DB_NAME = os.getenv("MONGO_DB_NAME", "crypto_db")
+MONGO_COLLECTION_NAME = os.getenv("MONGO_COLLECTION_NAME", "articles")
 
-# Media and video settings
-MEDIA_FOLDER = os.getenv("MEDIA_FOLDER", "media")
-BACKGROUND_MUSIC = os.getenv("BACKGROUND_MUSIC", "background.mp3")
-VIDEO_DURATION = int(os.getenv("VIDEO_DURATION", 10))
-
-# Telegram configuration
+# Telegram Config
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHANNEL_ID = os.getenv("TELEGRAM_CHANNEL_ID")
+
+# Video Generation Config
+MEDIA_FOLDER = os.getenv("MEDIA_FOLDER", "media")
+BACKGROUND_MUSIC = os.getenv("BACKGROUND_MUSIC", "background.mp3")
+VIDEO_DURATION = int(os.getenv("VIDEO_DURATION", 30))
+
+# Scheduler Config
+SCHEDULE_INTERVAL_HOURS = int(os.getenv("SCHEDULE_INTERVAL_HOURS", 2))
